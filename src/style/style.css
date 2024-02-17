@@ -1,0 +1,232 @@
+@import url(./font.css);
+
+/* ================== reset ================== */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/* ================== default ================== */
+
+:root {
+  --color-secondary-900: #0c4a6e;
+  --color-secondary-800: #075985;
+  --color-secondary-700: #0369a1;
+  --color-secondary-600: #0284c7;
+  --color-secondary-500: #0ea5e9;
+  --color-secondary-400: #38bdf8;
+  --color-secondary-300: #7dd3fc;
+  --color-secondary-200: #bae6fd;
+  --color-secondary-100: #e0f2fe;
+  --color-secondary-50: #f0f9ff;
+  --color-secondary-0: #ffffff;
+
+  --color-primary-900: #134e4a;
+  --color-primary-800: #115e59;
+  --color-primary-700: #0f766e;
+  --color-primary-600: #0d9488;
+  --color-primary-500: #14b8a6;
+  --color-primary-400: #2dd4bf;
+  --color-primary-300: #5eead4;
+  --color-primary-200: #99f6e4;
+  --color-primary-100: #ccfbf1;
+  --color-primary-50: #f0fdfa;
+
+  --border-radius-tiny: 3px;
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
+
+  --color-heading: #1e1e1e;
+  --color-discription: #696969;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--color-secondary-0);
+}
+
+body,
+* {
+  font-family: Vazirmatn;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1,
+h2 {
+  color: var(--color-heading);
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin: 3.3rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+.container {
+  max-width: 1336px;
+  margin: 0 auto;
+}
+
+.main {
+  margin: 5rem 3.3rem;
+  display: grid;
+  gap: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    /* column-gap: 7rem; */
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ================== btn ================== */
+.btn {
+  width: 15rem;
+  border: 0;
+  border-radius: var(--border-radius-sm);
+  padding: 1.5rem 1.2rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: center;
+  transition: all 0.2s ease-in;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-500);
+}
+
+.btn-primary {
+  background-color: var(--color-primary-400);
+  color: var(--color-secondary-0);
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    border-radius: var(--border-radius-md);
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    border-radius: var(--border-radius-lg);
+    font-size: 1.6rem;
+    padding: 1.8rem 1.4rem;
+  }
+}
+
+/* ================== item ================== */
+.request__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-box {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--color-secondary-200);
+  border: 0;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-text {
+  color: var(--color-secondary-900);
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 640px) {
+  .item-box {
+    border-radius: var(--border-radius-sm);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .item-box {
+    border-radius: var(--border-radius-md);
+    font-size: 1.6rem;
+  }
+
+  .item-text {
+    font-size: 1.6rem;
+  }
+}
+
+/* ================== discription ================== */
+.discription {
+  color: var(--color-discription);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+/* ================== request ================== */
+.request {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.request__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.request__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-text {
+  line-height: 27px;
+}
+
+.content-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content-footer__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.content-footer__item img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border: 0;
+  border-radius: var(--border-radius-lg);
+}
+
+.content-footer__item p {
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--color-heading);
+}
